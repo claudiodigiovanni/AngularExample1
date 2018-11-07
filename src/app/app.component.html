@@ -3,7 +3,7 @@
         <div class="form-group row">
             <label for="name" class="col-sm-12 col-form-label">name</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control"  id="name" placeholder="name" formControlName="name">
+                <input type="text" class="form-control"  id="name" placeholder="name" formControlName="name" [class.myalert]="myForm.get('name').invalid  && (myForm.get('name').dirty || myForm.get('name').touched)">
             </div>
             <div class="col-sm-12">
             
