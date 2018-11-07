@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 
+import {COURSES} from './shared/db-data'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,6 +10,9 @@ import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   title = 'angularTest1';
+
+
+  courses = COURSES;
 
   myForm:FormGroup;
 
@@ -24,7 +29,9 @@ export class AppComponent implements OnInit{
       ]),
       stars:this.fb.array([
         this.fb.control('')
-      ])
+      ]),
+      eyo:true,
+      course:''
     })
     
   }

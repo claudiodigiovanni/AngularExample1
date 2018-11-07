@@ -48,6 +48,28 @@
                 <button type="button" class="btn btn-primary" (click)="addEmail()">add</button>
             </fieldset>
         </div>
+
+        <div class="form-group row">
+            <label for="eyo" class="col-sm-12 col-form-label">EYO</label>
+            <div class="col-sm-12">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input"  id="eyo" formControlName="eyo">
+                    xxx
+                  </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+           
+            <div class="form-group">
+              <label for="course">Course</label>
+              <select class="form-control" id="course" formControlName="course">
+                <option *ngFor="let c of courses" value='{{c.id}}'>{{c.description}}</option>
+              </select>
+            </div>
+        </div>
         
 
         <button type="button" name="" id="" class="btn btn-secondary btn-lg btn-block" [disabled]="myForm.invalid">send</button>
